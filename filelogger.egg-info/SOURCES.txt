@@ -2,7 +2,6 @@ filelogger
 setup.cfg
 setup.py
 filelogger/__init__.py
-filelogger/filelogger.py
 filelogger.egg-info/PKG-INFO
 filelogger.egg-info/SOURCES.txt
 filelogger.egg-info/dependency_links.txt
