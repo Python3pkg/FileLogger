@@ -5,7 +5,7 @@ setup(
     description='Wrapper class for RotatingFileHandler from logging module',
     name='filelogger',
     version='0.1',
-    scripts=['filelogger'],
+    packages=['filelogger'],
     author='Norroen',
     author_email='nickmetal92@gmail.com',
 )
