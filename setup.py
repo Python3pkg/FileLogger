@@ -8,4 +8,5 @@ setup(
     packages=['filelogger'],
     author='Norroen',
     author_email='nickmetal92@gmail.com',
+    download_url='https://github.com/nickmetal/filelogger/archive/0.11.tar.gz',
 )
