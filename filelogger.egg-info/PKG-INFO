@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: filelogger
+Version: 0.1
+Summary: Wrapper class for RotatingFileHandler from logging module
+Home-page: https://github.com/nickmetal/FileLogger
+Author: Norroen
+Author-email: nickmetal92@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
