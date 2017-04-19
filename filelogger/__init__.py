@@ -9,9 +9,9 @@ class FileLogger():
         self.file_counts = kwargs.get('file_counts') or 0
         self.max_file_size = kwargs.get('max_file_size') or 5242880  # 5 mb
         self.logger = self.get_file_logger()
-        self.info = lambda text: self.logger.info(text)
-        self.warning = lambda text: self.logger.warning(text)
-        self.error = lambda text: self.logger.error(text)
+        self.info = lambda text: self.log(text, level='info')
+        self.warning = lambda text: self.log(text, level='warning')
+        self.error = lambda text: self.log(text, level='error')
 
     def get_file_logger(self):
         logger = logging.getLogger(self.name)
@@ -26,6 +26,10 @@ class FileLogger():
         handler.setLevel(logging.DEBUG)
         logger.addHandler(handler)
         return logger
+
+    def log(self, text, level):
+        print(text)
+        self.logger.__getattribute__(level)(text)
 
     @classmethod
     def usage(cls):
