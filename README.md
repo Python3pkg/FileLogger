@@ -16,10 +16,11 @@
     from filelogger import FileLogger
 
 
-    logger = FileLogger('logername', 'path_for_file.log')
-    logger.info(text) # print and save text in the path_for_file
-    logger.warning(text) # print and save text in the path_ for_file
-    logger.error(text) # print and save text in the pathfor_file
+    logger = FileLogger('path_for_file.log')
+    logger.info(string) # print and save string in the path_for_file
+    logger.info(arg1, arg2) # use couple of args
+    logger.warning(string) # print and save string in the path_for_file
+    logger.error(string) # print and save string in the path_for_file
 ```
 
 #### Customization
@@ -30,9 +31,12 @@
 
     # Set file counts for the rotation
     # default 0 (meaning 1 file using)
-    logger = FileLogger('logername', 'path_for_file.log', file_counts=0)
+    logger = FileLogger('path_for_file.log', file_counts=0)
 
     # Set max file size for the rotation (in bytes)
     # default 5242880 (5Mb)
     logger = FileLogger('logername', 'path_for_file.log', max_file_size=5242880)
+
+    # Disable print function call
+    logger = FileLogger('path_for_file.log', stdout=False)
 ```
