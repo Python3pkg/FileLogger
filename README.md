@@ -35,7 +35,7 @@
 
     # Set max file size for the rotation (in bytes)
     # default 5242880 (5Mb)
-    logger = FileLogger(path_for_file.log', max_file_size=5242880)
+    logger = FileLogger('path_for_file.log', max_file_size=5242880)
 
     # Disable print function call
     logger = FileLogger('path_for_file.log', stdout=False)
