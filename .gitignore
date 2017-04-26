@@ -6,4 +6,5 @@ __pycache__
 */__pycache__
 */*/__pycache__
 .pypirc
+filelogger.egg-info/
 dist

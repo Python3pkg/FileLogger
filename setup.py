@@ -9,4 +9,5 @@ setup(
     author='Me',
     author_email='nickmetal92@gmail.com',
     download_url='https://github.com/nickmetal/filelogger/archive/0.5.tar.gz',
+    keywords=['testing', 'logging'],
 )
