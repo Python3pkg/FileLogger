@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import logging.handlers
+from functools import partial
 
 
 class FileLogger():
@@ -30,13 +31,12 @@ class FileLogger():
 
     def _init_log_level_attributes(self):
         for level in self.SUPPORTED_LEVELS:
-            setattr(self, level, lambda *args: self.log(*args, level=level))
+            setattr(self, level, partial(self.log, level=level))
 
     def log(self, *args, **kwargs):
         text = " ".join(str(string) for string in args)
         if self.is_enable_stdout:
-            print(text)
-
+            print(text, kwargs['level'])
         self.logger.__getattribute__(kwargs['level'])(text)
 
     @classmethod
