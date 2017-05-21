@@ -36,7 +36,7 @@ class FileLogger():
     def log(self, *args, **kwargs):
         text = " ".join(str(string) for string in args)
         if self.is_enable_stdout:
-            print(text, kwargs['level'])
+            print((text, kwargs['level']))
         self.logger.__getattribute__(kwargs['level'])(text)
 
     @classmethod
